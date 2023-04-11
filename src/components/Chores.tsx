@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import { iChore } from '../App';
+import React, { useState } from 'react';
+import { iChore } from '../interfaces/chore.interface';
 import Chore from './Chore';
 import AddChore from './AddChore';
 
@@ -22,8 +22,6 @@ const Chores = () => {
   } 
 
   const nextId = getId(); 
-
-  console.log(chores)
 
   return (
 

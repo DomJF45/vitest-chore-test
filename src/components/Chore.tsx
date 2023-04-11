@@ -1,5 +1,5 @@
 import React from 'react';
-import { iChore } from '../App';
+import { iChore } from '../interfaces/chore.interface';
 
 interface Props {
   chore: iChore;

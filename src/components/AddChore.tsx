@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import { iChore } from '../App';
+import React, { useState } from 'react';
+import { iChore } from '../interfaces/chore.interface';
 
 interface Props {
   chores: iChore[];

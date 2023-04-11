@@ -4,14 +4,6 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Chores from './components/Chores';
 
-
-export interface iChore {
-  id: number;
-  name: string;
-  status: 'complete' | 'in-progress';
-  priority: string;
-}
-
 function App() {
 
   return (
