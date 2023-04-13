@@ -9,7 +9,6 @@ interface Props {
 const Chore = ({ chore, handleDelete }: Props) => {  
 
   const choreColor = (priority: string) => {
-
     switch (priority) {
       case 'high':
         return 'red';
@@ -20,11 +19,9 @@ const Chore = ({ chore, handleDelete }: Props) => {
       default:
         return 'red';
     }
-
   }
 
   return (
-
     <div
       className={'chore-card'}
       style={{
@@ -57,9 +54,7 @@ const Chore = ({ chore, handleDelete }: Props) => {
       >
       </div>
     </div>
-
   )
-
 }
 
 export default Chore;

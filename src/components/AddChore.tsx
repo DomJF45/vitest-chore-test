@@ -53,10 +53,52 @@ const AddChore = ({ chores, setChores, nextId }: Props) => {
           height: '20px'
         }}
       >Add Chore</button>
+      { showAdd && (
       <div
         className="add-modal"
         style={{
-          display: showAdd ? 'flex' : 'none',
+          display: 'flex',
+          width: '100%',
+          height: '100%',
+          justifyContent: 'center',
+          alignItems: 'center',
+          right: 0
+        }}
+      >
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label>Chore Name</label>
+            <input data-testid='chore-name' type="text" value={choreName} onChange={(e) => setChoreName(e.currentTarget.value)}/> 
+          </div>
+          <div>
+            <label>Priority Level</label>
+            <select data-testid='chore-prio' value={chorePriority} onChange={(e) => setChorePriority(e.currentTarget.value)}>
+              <option value={'high'}>high</option>
+              <option value={'medium'}>medium</option>
+              <option value={'low'}>low</option>
+            </select>
+
+          </div>
+          <button data-testid='add-chore' type='submit'>Add</button>
+        </form>
+
+      </div>
+      )}
+      
+
+    </div>
+
+  )
+
+}
+
+export default AddChore;
+
+/*
+      <div
+        className="add-modal"
+        style={{
+        display: showAdd ? 'flex' : 'none', 
           width: '100%',
           height: '100%',
           justifyContent: 'center',
@@ -82,11 +124,4 @@ const AddChore = ({ chores, setChores, nextId }: Props) => {
         </form>
 
       </div>
-
-    </div>
-
-  )
-
-}
-
-export default AddChore;
+*/
