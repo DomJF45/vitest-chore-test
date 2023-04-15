@@ -26,6 +26,7 @@ const Chores = () => {
   return (
 
     <>
+      <h1>Chore List</h1>
       <AddChore chores={chores} setChores={setChores} nextId={nextId} />
       <div 
         className='chores-container'
